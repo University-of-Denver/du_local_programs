@@ -1,0 +1,12 @@
+{
+  "name":             "university-of-denver/du_local_programs",
+  "version":          "10.20.0",
+  "description":      "Package for locally created academic programs",
+  "keywords":         ["University of Denver", "drupal"],
+  "homepage":         "http://www.du.edu",
+  "license":          "GPL-2.0+",
+  "type":             "drupal-module",
+  "extra": {
+      "_README": "DU Local Programs package"
+  }
+}
