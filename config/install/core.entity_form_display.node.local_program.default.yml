@@ -1,0 +1,460 @@
+uuid: 7fca74e7-ce27-4178-944f-2516a3e08d60
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.browse_files_modal
+    - field.field.node.local_program.field_local_program_meta_tags
+    - field.field.node.local_program.field_page_content
+    - field.field.node.local_program.field_program_additional_unit
+    - field.field.node.local_program.field_program_adult_education
+    - field.field.node.local_program.field_program_bulletin_link
+    - field.field.node.local_program.field_program_concentrations
+    - field.field.node.local_program.field_program_cta_links
+    - field.field.node.local_program.field_program_degree_level
+    - field.field.node.local_program.field_program_degree_type
+    - field.field.node.local_program.field_program_department_code
+    - field.field.node.local_program.field_program_description_1
+    - field.field.node.local_program.field_program_description_2
+    - field.field.node.local_program.field_program_display_req
+    - field.field.node.local_program.field_program_dual_degree
+    - field.field.node.local_program.field_program_federal_aid
+    - field.field.node.local_program.field_program_hero_image
+    - field.field.node.local_program.field_program_hide_college
+    - field.field.node.local_program.field_program_hide_degree_level
+    - field.field.node.local_program.field_program_hide_degree_type
+    - field.field.node.local_program.field_program_hide_department
+    - field.field.node.local_program.field_program_marketing_desc
+    - field.field.node.local_program.field_program_parent_program
+    - field.field.node.local_program.field_program_primary_unit
+    - field.field.node.local_program.field_program_req_links
+    - field.field.node.local_program.field_program_school_name
+    - node.type.local_program
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - entity_browser
+    - field_group
+    - link_attributes
+    - metatag
+    - paragraphs
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_details
+        - group_cards
+        - group_page
+      label: Tabs
+      parent_name: ''
+      weight: 9
+      format_type: tabs
+      format_settings:
+        classes: ''
+        id: ''
+        direction: horizontal
+    group_details:
+      children:
+        - group_degree_level
+        - group_degree_type
+        - group_college
+        - group_department
+        - field_program_dual_degree
+        - field_program_adult_education
+        - field_program_parent_program
+        - field_program_primary_unit
+        - field_program_additional_unit
+      label: Details
+      parent_name: group_tabs
+      weight: 10
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: true
+    group_degree_level:
+      children:
+        - field_program_degree_level
+        - field_program_hide_degree_level
+      label: 'Degree Level'
+      parent_name: group_details
+      weight: 7
+      format_type: details
+      format_settings:
+        classes: ''
+        id: ''
+        open: false
+        required_fields: true
+    group_degree_type:
+      children:
+        - field_program_degree_type
+        - field_program_hide_degree_type
+      label: 'Degree Type'
+      parent_name: group_details
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        id: ''
+        description: ''
+        required_fields: true
+        open: false
+    group_college:
+      children:
+        - field_program_school_name
+        - field_program_hide_college
+      label: College
+      parent_name: group_details
+      weight: 9
+      format_type: details
+      format_settings:
+        classes: ''
+        id: ''
+        open: false
+        required_fields: true
+    group_department:
+      children:
+        - field_program_department_code
+        - field_program_hide_department
+      label: Department
+      parent_name: group_details
+      weight: 10
+      format_type: details
+      format_settings:
+        classes: ''
+        id: ''
+        open: false
+        required_fields: true
+    group_cards:
+      children:
+        - field_program_description_1
+        - field_program_description_2
+        - field_program_cta_links
+        - group_requirements
+      label: Cards
+      parent_name: group_tabs
+      weight: 11
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_requirements:
+      children:
+        - field_program_display_req
+        - field_program_req_links
+      label: Requirements
+      parent_name: group_cards
+      weight: 24
+      format_type: details
+      format_settings:
+        classes: ''
+        id: ''
+        open: false
+        required_fields: false
+    group_page:
+      children:
+        - field_program_hero_image
+        - field_program_marketing_desc
+        - field_program_bulletin_link
+        - field_page_content
+      label: Page
+      parent_name: group_tabs
+      weight: 12
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: node.local_program.default
+targetEntityType: node
+bundle: local_program
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_local_program_meta_tags:
+    type: metatag_firehose
+    weight: 37
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_page_content:
+    type: entity_reference_paragraphs
+    weight: 36
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+  field_program_additional_unit:
+    type: entity_reference_autocomplete
+    weight: 15
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_program_adult_education:
+    type: boolean_checkbox
+    weight: 12
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_program_bulletin_link:
+    type: link_attributes
+    weight: 35
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        id: false
+        name: false
+        target: true
+        rel: true
+        class: true
+        accesskey: false
+    third_party_settings: {  }
+  field_program_cta_links:
+    type: link_attributes
+    weight: 23
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        onClick: true
+        title: true
+        target: true
+        data-toggle: false
+        fragment: false
+        id: false
+        name: false
+        rel: false
+        class: false
+        accesskey: false
+        aria-label: false
+    third_party_settings: {  }
+  field_program_degree_level:
+    type: options_select
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_program_degree_type:
+    type: options_select
+    weight: 19
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_program_department_code:
+    type: options_select
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_program_description_1:
+    type: text_textarea
+    weight: 21
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_program_description_2:
+    type: text_textarea
+    weight: 22
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_program_display_req:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_program_dual_degree:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_program_hero_image:
+    type: entity_browser_file
+    weight: 33
+    region: content
+    settings:
+      entity_browser: browse_files_modal
+      field_widget_edit: true
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      view_mode: default
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_program_hide_college:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_program_hide_degree_level:
+    type: boolean_checkbox
+    weight: 19
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_program_hide_degree_type:
+    type: boolean_checkbox
+    weight: 20
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_program_hide_department:
+    type: boolean_checkbox
+    weight: 21
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_program_marketing_desc:
+    type: text_textarea
+    weight: 34
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_program_parent_program:
+    type: options_select
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_program_primary_unit:
+    type: entity_reference_autocomplete
+    weight: 14
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_program_req_links:
+    type: link_attributes
+    weight: 12
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        onClick: true
+        title: true
+        target: true
+        data-toggle: false
+        fragment: false
+        id: false
+        name: false
+        rel: false
+        class: false
+        accesskey: false
+        aria-label: false
+    third_party_settings: {  }
+  field_program_school_name:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 100
+      placeholder: 'Local Program Name'
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_program_concentrations: true
+  field_program_federal_aid: true

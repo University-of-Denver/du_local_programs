@@ -1,0 +1,22 @@
+uuid: 8c0e9aaa-7059-4130-91f4-e44963f5c4ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.local_program
+id: node.local_program.status
+field_name: status
+entity_type: node
+bundle: local_program
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

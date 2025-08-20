@@ -1,0 +1,310 @@
+uuid: c3867904-318f-446c-91cf-00b460b40416
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_content
+    - node.type.local_program
+    - paragraphs.paragraphs_type.application_information
+    - paragraphs.paragraphs_type.body_copy
+    - paragraphs.paragraphs_type.carousel
+    - paragraphs.paragraphs_type.cta
+    - paragraphs.paragraphs_type.expanding_list
+    - paragraphs.paragraphs_type.featured_courses
+    - paragraphs.paragraphs_type.featured_curricula
+    - paragraphs.paragraphs_type.featured_event
+    - paragraphs.paragraphs_type.featured_video_component
+    - paragraphs.paragraphs_type.heading
+    - paragraphs.paragraphs_type.icon_list
+    - paragraphs.paragraphs_type.key_faculty_and_students
+    - paragraphs.paragraphs_type.mini_calendar
+    - paragraphs.paragraphs_type.quick_stats
+    - paragraphs.paragraphs_type.related_stories
+    - paragraphs.paragraphs_type.stories
+    - paragraphs.paragraphs_type.testimonials_spotlight
+    - paragraphs.paragraphs_type.two_col_copy
+    - paragraphs.paragraphs_type.unit_carousel
+  module:
+    - entity_reference_revisions
+id: node.local_program.field_page_content
+field_name: field_page_content
+entity_type: node
+bundle: local_program
+label: 'Page Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      application_information: application_information
+      body_copy: body_copy
+      carousel: carousel
+      cta: cta
+      expanding_list: expanding_list
+      featured_courses: featured_courses
+      featured_event: featured_event
+      featured_curricula: featured_curricula
+      featured_video_component: featured_video_component
+      heading: heading
+      icon_list: icon_list
+      key_faculty_and_students: key_faculty_and_students
+      quick_stats: quick_stats
+      related_stories: related_stories
+      mini_calendar: mini_calendar
+      stories: stories
+      testimonials_spotlight: testimonials_spotlight
+      two_col_copy: two_col_copy
+      unit_carousel: unit_carousel
+    negate: 0
+    target_bundles_drag_drop:
+      academic_programs:
+        weight: 75
+        enabled: false
+      academic_programs_filter:
+        weight: 76
+        enabled: false
+      academic_programs_legend_def:
+        weight: 77
+        enabled: false
+      admission_steps:
+        weight: 78
+        enabled: false
+      admission_steps_in_content:
+        weight: 79
+        enabled: false
+      application_card:
+        weight: 80
+        enabled: false
+      application_information:
+        weight: 81
+        enabled: true
+      article_list:
+        weight: 82
+        enabled: false
+      big_button:
+        weight: 83
+        enabled: false
+      block:
+        weight: 84
+        enabled: false
+      body_copy:
+        weight: 85
+        enabled: true
+      body_text:
+        weight: 86
+        enabled: false
+      button:
+        weight: 87
+        enabled: false
+      card:
+        weight: 88
+        enabled: false
+      cards:
+        weight: 89
+        enabled: false
+      carousel:
+        weight: 90
+        enabled: true
+      category_link:
+        weight: 91
+        enabled: false
+      category_menu:
+        weight: 92
+        enabled: false
+      contact_single:
+        weight: 93
+        enabled: false
+      contacts:
+        weight: 94
+        enabled: false
+      content_gallery:
+        weight: 103
+        enabled: false
+      cta:
+        weight: 95
+        enabled: true
+      cta_group:
+        weight: 96
+        enabled: false
+      cta_inline:
+        weight: 97
+        enabled: false
+      dropdown_video:
+        weight: 107
+        enabled: false
+      embed_code:
+        weight: 98
+        enabled: false
+      event_list:
+        weight: 99
+        enabled: false
+      event_time_place:
+        weight: 100
+        enabled: false
+      expanding_list:
+        weight: 101
+        enabled: true
+      feature_media:
+        weight: 102
+        enabled: false
+      feature_media_image:
+        weight: 103
+        enabled: false
+      feature_media_video:
+        weight: 104
+        enabled: false
+      featured_article:
+        weight: 105
+        enabled: false
+      featured_articles:
+        weight: 106
+        enabled: false
+      featured_courses:
+        weight: 107
+        enabled: true
+      featured_curricula:
+        weight: 109
+        enabled: true
+      featured_event:
+        weight: 108
+        enabled: true
+      featured_event_slide:
+        weight: 109
+        enabled: false
+      featured_video_component:
+        weight: 110
+        enabled: true
+      heading:
+        weight: 111
+        enabled: true
+      hero_media:
+        weight: 112
+        enabled: false
+      homepage_facts:
+        weight: 113
+        enabled: false
+      homepage_programs_search:
+        weight: 114
+        enabled: false
+      homepage_quote:
+        weight: 115
+        enabled: false
+      homepage_quotes:
+        weight: 116
+        enabled: false
+      homepage_section_copy:
+        weight: 117
+        enabled: false
+      homepage_swapping_image_feature:
+        weight: 118
+        enabled: false
+      homepage_video_carousel:
+        weight: 119
+        enabled: false
+      hvc_slide:
+        weight: 120
+        enabled: false
+      icon_link:
+        weight: 121
+        enabled: false
+      icon_list:
+        weight: 122
+        enabled: true
+      icon_list_item:
+        weight: 123
+        enabled: false
+      image_with_caption:
+        weight: 124
+        enabled: false
+      inset_video:
+        weight: 125
+        enabled: false
+      key_faculty_and_students:
+        weight: 126
+        enabled: true
+      list_of_links:
+        weight: 127
+        enabled: false
+      mini_calendar:
+        weight: 139
+        enabled: true
+      named_anchor:
+        weight: 128
+        enabled: false
+      profile_list:
+        weight: 129
+        enabled: false
+      profile_performances:
+        weight: 130
+        enabled: false
+      pull_quote:
+        weight: 131
+        enabled: false
+      quick_facts:
+        weight: 132
+        enabled: false
+      quick_facts_feature_fact:
+        weight: 133
+        enabled: false
+      quick_facts_list_item_simple:
+        weight: 134
+        enabled: false
+      quick_facts_list_of_facts:
+        weight: 135
+        enabled: false
+      quick_stat:
+        weight: 136
+        enabled: false
+      quick_stats:
+        weight: 137
+        enabled: true
+      related_stories:
+        weight: 138
+        enabled: true
+      research_project_list:
+        weight: 151
+        enabled: false
+      resource_list:
+        weight: 139
+        enabled: false
+      show_hide_toggle:
+        weight: 140
+        enabled: false
+      slide:
+        weight: 141
+        enabled: false
+      social_media_bar:
+        weight: 142
+        enabled: false
+      stories:
+        weight: 143
+        enabled: true
+      subhead:
+        weight: 144
+        enabled: false
+      testimonials_spotlight:
+        weight: 145
+        enabled: true
+      two_col_copy:
+        weight: 146
+        enabled: true
+      two_value_text:
+        weight: 147
+        enabled: false
+      unit_carousel:
+        weight: 153
+        enabled: true
+      unit_hero_media_:
+        weight: 149
+        enabled: false
+      unit_slide:
+        weight: 155
+        enabled: false
+      webform:
+        weight: 148
+        enabled: false
+field_type: entity_reference_revisions

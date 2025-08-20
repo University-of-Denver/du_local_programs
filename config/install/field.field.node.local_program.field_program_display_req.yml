@@ -1,0 +1,23 @@
+uuid: f66c13ea-ee5c-4401-af1e-c07940fc04c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_display_req
+    - node.type.local_program
+id: node.local_program.field_program_display_req
+field_name: field_program_display_req
+entity_type: node
+bundle: local_program
+label: 'Show Default Requirements'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

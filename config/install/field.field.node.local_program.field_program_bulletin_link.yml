@@ -1,0 +1,23 @@
+uuid: 934fb747-fb0e-4dd6-a748-af588be21e0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_bulletin_link
+    - node.type.local_program
+  module:
+    - link
+id: node.local_program.field_program_bulletin_link
+field_name: field_program_bulletin_link
+entity_type: node
+bundle: local_program
+label: 'Bulletin Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

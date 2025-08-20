@@ -1,0 +1,29 @@
+uuid: 832ea568-813d-4cc1-882f-c980176c0c47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_concentrations
+    - node.type.local_program
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    rich_text: rich_text
+    plain_text: plain_text
+    embed_code: '0'
+    inline_formatting: '0'
+id: node.local_program.field_program_concentrations
+field_name: field_program_concentrations
+entity_type: node
+bundle: local_program
+label: Concentrations
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

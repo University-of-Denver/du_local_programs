@@ -1,0 +1,29 @@
+uuid: a8cd8b25-6273-41ab-be7b-a5a0d2755a21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_description_2
+    - node.type.local_program
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    rich_text: rich_text
+    plain_text: plain_text
+    embed_code: '0'
+    inline_formatting: '0'
+id: node.local_program.field_program_description_2
+field_name: field_program_description_2
+entity_type: node
+bundle: local_program
+label: 'Description 2'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

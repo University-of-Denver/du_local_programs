@@ -1,0 +1,25 @@
+uuid: e7ae53b6-488b-4861-a275-ca6f0e2af9ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_department_code
+    - node.type.local_program
+id: node.local_program.field_program_department_code
+field_name: field_program_department_code
+entity_type: node
+bundle: local_program
+label: 'Department Code'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: departments
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

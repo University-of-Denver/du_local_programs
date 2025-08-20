@@ -1,0 +1,21 @@
+uuid: 0440a899-cdda-4b6a-9395-46771a5e132d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_local_program_meta_tags
+    - node.type.local_program
+  module:
+    - metatag
+id: node.local_program.field_local_program_meta_tags
+field_name: field_local_program_meta_tags
+entity_type: node
+bundle: local_program
+label: 'Meta tags'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

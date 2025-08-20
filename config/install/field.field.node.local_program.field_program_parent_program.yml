@@ -1,0 +1,28 @@
+uuid: f07151dc-6718-4dce-9ce7-d1f99c878ef9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_parent_program
+    - node.type.academic_program
+    - node.type.local_program
+id: node.local_program.field_program_parent_program
+field_name: field_program_parent_program
+entity_type: node
+bundle: local_program
+label: 'Parent Program'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      academic_program: academic_program
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
